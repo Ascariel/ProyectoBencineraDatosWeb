@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf4c16f631f6434eb57f729931db25f1" Name="Diagram1">
+        <EntityTypeShape EntityType="GestionBencineraModel.Empresa" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionBencineraModel.Estanque" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionBencineraModel.Sucursal" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionBencineraModel.Usuario" Width="2" PointX="1.75" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="GestionBencineraModel.FK__Sucursal__Id_Emp__08EA5793" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionBencineraModel.FK__Estanque__Id_Suc__0DAF0CB0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

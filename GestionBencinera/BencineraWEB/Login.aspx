@@ -12,6 +12,8 @@
     sdfsdfs
         <br />
         POLLITO LINDO!!! funciona &lt;3</div>
+
+        <asp:Label Text="" ID="lblMensaje" runat="server" />
     </form>
 </body>
 </html>
