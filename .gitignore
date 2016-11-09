@@ -46,24 +46,25 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-BencineraWEB/bin
-BencineraWEB/obj
-BencineraWEB/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-BencineraWEB/obj/Debug/*.cache
+GestionBencinera/BencineraWEB/bin
+GestionBencinera/BencineraWEB/obj
+GestionBencinera/BencineraWEB/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+GestionBencinera/BencineraWEB/obj/Debug/*.cache
 
-BencineraDALC/bin
-BencineraDALC/obj
-BencineraDALC/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-BencineraDALC/obj/Debug/*.cache
+GestionBencinera/BencineraDALC/bin
+GestionBencinera/BencineraDALC/obj
+GestionBencinera/BencineraDALC/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+GestionBencinera/BencineraDALC/obj/Debug/*.cache
 
-BencineraNegocio/bin
-BencineraNegocio/obj
-BencineraNegocio/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-BencineraNegocio/obj/Debug/*.cache
+GestionBencinera/BencineraNegocio/bin
+GestionBencinera/BencineraNegocio/obj
+GestionBencinera/BencineraNegocio/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+GestionBencinera/BencineraNegocio/obj/Debug/*.cache
 
 
-BencineraEntidades/bin
-BencineraEntidades/obj
-BencineraEntidades/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-BencineraEntidades/obj/Debug/*.cache
+GestionBencinera/BencineraEntidades/bin
+GestionBencinera/BencineraEntidades/obj
+GestionBencinera/BencineraEntidades/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+GestionBencinera/BencineraEntidades/obj/Debug/*.cache
 *.suo
+GestionBencinera/BencineraDALC/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
