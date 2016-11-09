@@ -1,0 +1,10 @@
+--insert into dbo.Empresa values('rut','Juanito','juan@123.cl')
+--insert into dbo.Sucursal values('Sucursal_1','direccion_1','email_1','fono_1',1)
+--insert into dbo.Estanque values('estaque_a','gas_97',100,30,2)
+--insert into dbo.Usuario values('Admin', 'Apellido', 'Fono', 'rut', 'Turno', 'Jefe', 'admin', 'passpass')
+
+select * from Sucursal
+select * from Empresa
+select * from Estanque
+select * from Usuario
+

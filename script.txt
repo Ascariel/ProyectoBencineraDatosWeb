@@ -1,0 +1,41 @@
+CREATE DATABASE GestionBencinera
+
+CREATE TABLE dbo.Usuario(
+
+	Nombre nvarchar(50) NOT NULL,
+	Apellido nvarchar(50) NOT NULL,
+	Telefono nvarchar(50) NOT NULL,
+	Rut nvarchar(50) NOT NULL,
+	Turno nvarchar(50) NOT NULL,	
+	Tipo_Usuario nvarchar(50) NOT NULL,
+	Email nvarchar(50) primary key NOT NULL,
+	Password nvarchar(50) NOT NULL,
+);	
+
+CREATE TABLE dbo.Empresa(
+	Id int PRIMARY KEY NOT NULL identity,
+	Rut varchar(50),
+	Nombre varchar(50),
+	Correo nvarchar(50)
+	);
+	
+CREATE TABLE dbo.Sucursal(
+	Id int PRIMARY KEY NOT NULL identity,
+	Nombre varchar(50),
+	Direccion nvarchar(50),
+	Email nvarchar(50),
+	Fono varchar(50),
+	Id_Empresa int,
+	FOREIGN KEY(Id_Empresa) REFERENCES Empresa(Id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+create table dbo.Estanque(
+	CodigoEstanque varchar(50) PRIMARY KEY NOT NULL,
+	TipoCombustible varchar(50),
+	CantidadTotal float,
+	CantidadUtilizada float,
+	Id_Sucursal int
+	FOREIGN KEY(Id_Sucursal) REFERENCES Sucursal(Id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+	);
