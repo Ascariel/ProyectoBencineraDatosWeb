@@ -11,7 +11,7 @@
     <div>
     sdfsdfs
         <br />
-        POLLITO LINDO!!! &lt;3</div>
+        POLLITO LINDO!!! funciona &lt;3</div>
     </form>
 </body>
 </html>
