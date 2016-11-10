@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterLayout.master.cs" Inherits="BencineraWEB.MasterLayout" %>
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link href="css/JumbotronTemplate.css" rel="stylesheet" />
+    <link href="css/sweetalert2.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+        <div class="container">
+            <asp:ContentPlaceHolder ID="navbar" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation" class="active"><a href="Home.aspx">Home</a></li>
+
+                        <% if (Session["estadoLogin"] != null && Session["estadoLogin"] == "LOGUEADO")
+                           {%>
+                        <li role="presentation"><a href="vistas/ListadoUsuarios.aspx">Listado Usuarios</a></li>
+                        <li role="presentation">
+                            <asp:Button ID="btnLogout" OnClick="btnLogout_Click" Text="Logout" CssClass="btn btn-danger" runat="server" />
+                        </li>
+                        <%}
+                           else
+                           { %>
+                        <li role="presentation"><a href="/vistas/Login.aspx">Ingresar</a></li>
+                        <li role="presentation"><a href="/vistas/SignUp.aspx">Registrar</a></li>
+                        <% } %>
+                    </ul>
+                </nav>
+                <h3 class="text-muted">Proyecto Bencinera</h3>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+            </div>
+            <asp:ContentPlaceHolder ID="main_content" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="javascripts" runat="server"></asp:ContentPlaceHolder>
+
+    <script>
+        <% if (Request.Params["alert"] == "empty_fields")
+           { %>
+        swal("Atencion", "Asegurate de llenar todos los campos antes de continuar", "warning")
+        <% }
+           else if (Request.Params["alert"] == "success")
+           { %>
+        swal("Operacion Exitosa", "Todo salio bien =p", "success");
+        <%}
+           else if (Request.Params["alert"] == "wrong_credentials")
+           {%>
+        swal("Credenciales Invalidas", "Combinacion de usuario contrasenia incorrectas", "warning");
+        <% }
+           else if (Request.Params["alert"] == "usuario_creado")
+           {%>
+        swal("Creacion Exitosa", "Usuario ha sido creado!", "success");
+        <% }         
+           else if (Request.Params["alert"] == "usuario_ya_existe")
+           {%>
+        swal("Email No Disponible", "El email utilizado ya ha sido asignado a otra cuenta, intente con otro", "warning");
+        <% } 
+        else if (Request.Params["alert"] == "usuario_eliminado")
+        {%>
+        swal("Usuario Eliminado", "El Usuario ha sido eliminado exitosamente", "success");
+        <% } %>
+
+
+        
+    </script>
+</body>
+</html>
+
+
+
