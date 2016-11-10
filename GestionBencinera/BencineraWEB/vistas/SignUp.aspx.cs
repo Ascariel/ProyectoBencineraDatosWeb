@@ -15,6 +15,8 @@ namespace BencineraWEB.vistas
         {
             if (!IsPostBack)
             {
+
+                this.txtEmail.Enabled = true;
                 // es get
                 lblMsg.Text = "";
                 lblMsg.Visible = false;
@@ -36,6 +38,7 @@ namespace BencineraWEB.vistas
                         this.txtTurno.Text = objUsuarioBEL.Turno;
                         this.txtEmail.Text = objUsuarioBEL.Email;
                         this.txtPass.Text = objUsuarioBEL.Password;
+                        this.txtEmail.Enabled = false;
                     }
                 }
             }
@@ -127,8 +130,9 @@ namespace BencineraWEB.vistas
 
             ControladorBLL objControl = new ControladorBLL();
 
-            bool actualizacionExitosa = objControl.editarUsuario(objUsu);
-            if (!actualizacionExitosa)
+            string emailInicial = Request.Params["email"];
+            bool actualizacionExitosa = objControl.editarUsuario(emailInicial, objUsu);
+            if (actualizacionExitosa)
             {
                 Response.Redirect("/vistas/ListadoUsuarios.aspx?alert=usuario_editado");
             }

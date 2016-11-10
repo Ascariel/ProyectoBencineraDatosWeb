@@ -89,26 +89,25 @@ namespace BencineraNegocio
             return objUsuarioBELInsertado != null;
         }
 
-        public bool editarUsuario(UsuarioBEL pObjUsuarioBEL)
+        public bool editarUsuario(string emailInicial, UsuarioBEL pObjUsuarioBEL)
         {
 
-            bool usuarioNoExisteEnDB = this.getUsuarioPorEmail(pObjUsuarioBEL.Email) == null;
-            if (usuarioNoExisteEnDB)
+            Usuario objUsuarioDALC = Conexion.ConexionBencinera.Usuario.FirstOrDefault(x => x.Email.Equals(emailInicial));
+            if (objUsuarioDALC == null)
             {
                 //No se edita ya que usuario no existe con ese correo en la DB
                 return false;
             }
-            Usuario objusuarioDALC = new Usuario
-            {
-                Nombre = pObjUsuarioBEL.Nombre,
-                Apellido = pObjUsuarioBEL.Apellido,
-                Email = pObjUsuarioBEL.Email,
-                Password = pObjUsuarioBEL.Password,
-                Rut = pObjUsuarioBEL.Rut,
-                Telefono = pObjUsuarioBEL.Telefono,
-                Tipo_Usuario = pObjUsuarioBEL.Tipo_Usuario,
-                Turno = pObjUsuarioBEL.Turno
-            };
+
+                objUsuarioDALC.Nombre = pObjUsuarioBEL.Nombre;
+                objUsuarioDALC.Apellido = pObjUsuarioBEL.Apellido;
+               // objUsuarioDALC.Email = pObjUsuarioBEL.Email;
+                objUsuarioDALC.Password = pObjUsuarioBEL.Password;
+                objUsuarioDALC.Rut = pObjUsuarioBEL.Rut;
+                objUsuarioDALC.Telefono = pObjUsuarioBEL.Telefono;
+                //objUsuarioDALC.Tipo_Usuario = pObjUsuarioBEL.Tipo_Usuario;
+                objUsuarioDALC.Turno = pObjUsuarioBEL.Turno;
+            
             Conexion.ConexionBencinera.SaveChanges();
             return true;
         }

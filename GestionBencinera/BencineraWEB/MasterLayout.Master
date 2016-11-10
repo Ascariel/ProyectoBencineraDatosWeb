@@ -78,7 +78,7 @@
         {%>
             swal("Usuario Actualizado", "El Usuario ha sido actualizado exitosamente", "success");
         <% }
-        else if (Request.Params["alert"] == "usuario_editado")
+        else if (Request.Params["alert"] == "usuario_no_editado")
         {%>
             swal("Usuario No Actualizado", "El Usuario no ha sido actualizado ", "warning");
         <% } %>
