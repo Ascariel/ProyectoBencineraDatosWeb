@@ -37,6 +37,7 @@
                 <h3 class="text-muted">Proyecto Bencinera</h3>
                 <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
+            
             <asp:ContentPlaceHolder ID="main_content" runat="server">
             </asp:ContentPlaceHolder>
 
