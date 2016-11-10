@@ -34,23 +34,23 @@ namespace BencineraWEB
         {
             string email = txtUsername.Text;
             string password = txtPassword.Text;
-            //Controlador objControlador = (Controlador)Session["controlador"];
+            ControladorBLL controlador = new ControladorBLL();
 
-            //var objUsuario = objControlador.ListaUsuarios.FirstOrDefault(item => item.email.Equals(email));
+            UsuarioBEL objUsuarioBEL = controlador.validarLogin(email, password);
 
-            //if (email.Length == 0 || password.Length == 0)
-            //{
-            //    Response.Redirect("Login.aspx?alert=empty_fields", false);
-            //}
-            //else if (objUsuario == null || !objUsuario.password.Equals(password))
-            //{
-            //    Response.Redirect("Login.aspx?alert=wrong_credentials", false);
-            //}
-            //else
-            //{
-            //    Session["estadoLogin"] = "LOGUEADO";
-            //    Response.Redirect("ListadoUsuarios.aspx?alert=success");
-            //}
+            if (email.Length == 0 || password.Length == 0)
+            {
+                Response.Redirect("Login.aspx?alert=empty_fields", false);
+            }
+            else if (objUsuarioBEL == null)
+            {
+                Response.Redirect("Login.aspx?alert=wrong_credentials", false);
+            }
+            else
+            {
+                Session["estadoLogin"] = "LOGUEADO";
+                Response.Redirect("ListadoUsuarios.aspx?alert=success");
+            }
         }
     }
 }
