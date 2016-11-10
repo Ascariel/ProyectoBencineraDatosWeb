@@ -19,7 +19,7 @@
     <div class="jumbotron" style="background-image:url(http://asexma.cl/wp-content/uploads/2015/04/copec.jpg); background-repeat:no-repeat; background-size:cover">
         <h1 style="text-align:right; color:white ">Bienvenido</h1>
         <p style="text-align:right; color:white " class="lead">Mantenedor de usuarios<br />para acceso diferentes procesos.</p>
-        <p><a class="btn btn-lg btn-default" href="SignUp.aspx" role="button" style="margin-left:380px;">Regístrate aquí</a></p></div>
+        <p><a class="btn btn-lg btn-default" href="/vistas/SignUp.aspx" role="button" style="margin-left:380px;">Regístrate aquí</a></p></div>
 
     <div class="row marketing">
         <div class="col-md-">

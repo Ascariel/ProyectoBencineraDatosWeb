@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <link href="css/JumbotronTemplate.css" rel="stylesheet" />
-    <link href="css/sweetalert2.min.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/JumbotronTemplate.css" rel="stylesheet" />
+    <link href="/css/sweetalert2.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -22,7 +22,7 @@
 
                         <% if (Session["estadoLogin"] != null && Session["estadoLogin"] == "LOGUEADO")
                            {%>
-                        <li role="presentation"><a href="vistas/ListadoUsuarios.aspx">Listado Usuarios</a></li>
+                        <li role="presentation"><a href="/vistas/ListadoUsuarios.aspx">Listado Usuarios</a></li>
                         <li role="presentation">
                             <asp:Button ID="btnLogout" OnClick="btnLogout_Click" Text="Logout" CssClass="btn btn-danger" runat="server" />
                         </li>
