@@ -44,9 +44,9 @@
         </div>
     </form>
 
-    <script src="js/sweetalert2.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="javascripts" runat="server"></asp:ContentPlaceHolder>
 
     <script>

@@ -3,7 +3,7 @@
 
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="head">
     <title>Home</title>
-    <link href="JumbotronTemplate.css" rel="stylesheet" />
+    
     <style type="text/css">
         .auto-style1 {
             width: 1125px;
