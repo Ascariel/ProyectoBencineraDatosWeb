@@ -44,6 +44,9 @@ namespace BencineraWEB
                     {
                         Response.Redirect("/vistas/ListadoUsuarios?alert=usuario_eliminado");
                     }
+                    else {
+                        Response.Redirect("/vistas/ListadoUsuarios?alert=usuario_no_eliminado");
+                    }
 
                     break;
                 default:
