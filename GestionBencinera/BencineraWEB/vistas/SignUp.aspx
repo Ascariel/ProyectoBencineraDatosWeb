@@ -48,7 +48,14 @@
             </div>
             <div class="col-md-6">
                 <br />
-                <asp:Button ID="btnCrearCuenta" Text="Crear cuenta" runat="server" CssClass="btn btn-primary" OnClick="btnCrearCuenta_Click" />                
+
+                <% if (Request.Params["email"] != null && Request.Params["email"].Length > 0)
+                   {%>
+                     <asp:Button ID="btnEditar" Text="Actualizar Datos" runat="server" CssClass="btn btn-primary" OnClick="btnEditar_Click" />                   
+                <% } else { %>
+                    <asp:Button ID="btnCrearCuenta" Text="Crear cuenta" runat="server" CssClass="btn btn-primary" OnClick="btnCrearCuenta_Click" />                
+                <% } %>
+                
             </div>
         </div>
     </div>

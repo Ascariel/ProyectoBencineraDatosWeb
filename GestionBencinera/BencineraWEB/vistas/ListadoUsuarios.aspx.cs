@@ -13,10 +13,13 @@ namespace BencineraWEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
+                //es get
                 cargarGrillaUsuarios();
             }
+
         }
 
         private void cargarGrillaUsuarios()
