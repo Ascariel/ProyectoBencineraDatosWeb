@@ -13,7 +13,10 @@ namespace BencineraWEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                cargarGrillaUsuarios();
+            }
         }
 
         private void cargarGrillaUsuarios()
@@ -35,14 +38,14 @@ namespace BencineraWEB
             switch (accion)
             {
                 case "Modificar":
-                    Response.Redirect("/vistas/SignUp?email="+ objUsuarioBEL.Email);
+                    Response.Redirect("/vistas/SignUp.aspx?email="+ objUsuarioBEL.Email);
                     break;
                 case "Eliminar":
                     bool eliminado = objControlador.eliminarUsuario(email);
 
                     if (eliminado)
                     {
-                        Response.Redirect("/vistas/ListadoUsuarios?alert=usuario_eliminado");
+                        Response.Redirect("/vistas/ListadoUsuarios.aspx?alert=usuario_eliminado");
                     }
 
                     break;
