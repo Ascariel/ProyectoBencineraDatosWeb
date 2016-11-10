@@ -7,17 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace BencineraWEB
 {
-    public partial class MasterLayout : System.Web.UI.MasterPage
+    public partial class ListadoUsuarios : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Session["estadoLogin"] = "DESLOGUEADO";
-            Response.Redirect("/vistas/Home.aspx");
         }
     }
 }

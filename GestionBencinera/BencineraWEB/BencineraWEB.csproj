@@ -70,6 +70,7 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\sweetalert2.min.js" />
+    <Content Include="ListadoUsuarios.aspx" />
     <Content Include="vistas\Home.aspx" />
     <Content Include="vistas\Login.aspx" />
     <Content Include="vistas\SignUp.aspx" />
@@ -78,6 +79,13 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoUsuarios.aspx.cs">
+      <DependentUpon>ListadoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoUsuarios.aspx.designer.cs">
+      <DependentUpon>ListadoUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="vistas\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

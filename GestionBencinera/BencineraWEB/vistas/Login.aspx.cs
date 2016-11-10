@@ -40,16 +40,16 @@ namespace BencineraWEB
 
             if (email.Length == 0 || password.Length == 0)
             {
-                Response.Redirect("Login.aspx?alert=empty_fields", false);
+                Response.Redirect("/vistas/Login.aspx?alert=empty_fields", false);
             }
             else if (objUsuarioBEL == null)
             {
-                Response.Redirect("Login.aspx?alert=wrong_credentials", false);
+                Response.Redirect("/vistas/Login.aspx?alert=wrong_credentials", false);
             }
             else
             {
                 Session["estadoLogin"] = "LOGUEADO";
-                Response.Redirect("ListadoUsuarios.aspx?alert=success");
+                Response.Redirect("/vistas/ListadoUsuarios.aspx?alert=success");
             }
         }
     }

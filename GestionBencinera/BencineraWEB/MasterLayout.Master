@@ -18,7 +18,7 @@
             <div class="header clearfix">
                 <nav>
                     <ul class="nav nav-pills pull-right">
-                        <li role="presentation" class="active"><a href="Home.aspx">Home</a></li>
+                        <li role="presentation" class="active"><a href="/vistas/Home.aspx">Home</a></li>
 
                         <% if (Session["estadoLogin"] != null && Session["estadoLogin"] == "LOGUEADO")
                            {%>
